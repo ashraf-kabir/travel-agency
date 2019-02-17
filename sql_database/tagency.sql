@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2019 at 09:45 AM
+-- Generation Time: Feb 17, 2019 at 04:17 PM
 -- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,7 +39,6 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`user_id`, `user_email`, `user_pass`) VALUES
-(1, 'ashrafkabir95@gmail.com', 'ashraf'),
 (2, 'admin@gmail.com', 'admin');
 
 -- --------------------------------------------------------
