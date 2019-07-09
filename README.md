@@ -9,6 +9,6 @@ to access admin panel:
 Email: admin@gmail.com
 Password: admin
 
-for further information & help contact: <s.m.ashraf.kabir@g.bracu.ac.bd>
+for further information & help contact: <ashrafkabir95@gmail.com>
 
 [keep coding]
