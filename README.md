@@ -8,3 +8,5 @@ to access admin panel:
 
 Email: admin@gmail.com
 Password: admin
+
+if you need the sql database file, email me on <s.m.ashraf.kabir@g.bracu.ac.bd>
