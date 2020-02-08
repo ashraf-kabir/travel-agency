@@ -1,6 +1,7 @@
 # Travel-Agency
 
-sql database file is in 'sql_database' folder named as tagency.sql
+This site developed using PHP mysqli and some javascript.
+
 first create a database on your localhost named as 'tagency' (without quote) & then import the above mentioned sql file
 
 to access admin panel:
