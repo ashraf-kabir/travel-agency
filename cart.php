@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <?php
 session_start();
 $total = 0;
 include("functions/functions.php");
 ?>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -121,7 +120,7 @@ include("functions/functions.php");
                                         global $con;
                                         if (isset($_POST['update_cart'])) {
                                             $qty = $_POST['qty'];
-                                            
+
                                             $update_qty = "update cart set qty='$qty'";
                                             $run_qty = mysqli_query($con, $update_qty);
                                             $_SESSION['qty'] = $qty;
@@ -129,7 +128,7 @@ include("functions/functions.php");
                                         }
                                         ?>
                                         <td>
-                                            <?php echo "$".$single_price; ?>
+                                            <?php echo "$" . $single_price; ?>
                                         </td>
                                     </tr>
                                     <?php
@@ -139,20 +138,22 @@ include("functions/functions.php");
                             <tr align="right">
                                 <td colspan="4"><b>Sub Total:</b></td>
                                 <td>
-                                    <?php echo "$".$total; ?>
+                                    <?php echo "$" . $total; ?>
                                 </td>
                             </tr>
                             <tr align="center">
                                 <td colspan="2"><input type="submit" name="update_cart" value="Update Cart"></td>
                                 <td><input type="submit" name="continue" value="Continue Shopping"></td>
                                 <td>
-                                    <button><a href="checkout.php" style="text-decoration: none; color: black;">Checkout</a></button>
+                                    <button><a href="checkout.php"
+                                               style="text-decoration: none; color: black;">Checkout</a></button>
                                 </td>
                             </tr>
                         </table>
                     </form>
                     <?php
-                    function updatecart() {
+                    function updatecart()
+                    {
                         global $con;
                         $ip = getIp();
 
@@ -169,6 +170,7 @@ include("functions/functions.php");
                             echo "<script>window.open('index.php','self')</script>";
                         }
                     }
+
                     echo @$up_cart = updatecart();
                     ?>
                 </div>
@@ -176,7 +178,7 @@ include("functions/functions.php");
         </div>
         <!--Content ends here-->
         <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
+            <h2 style="text-align: center; padding-top: 30px;">&copy Ashraf Kabir MMXVIII</h2>
         </div>
     </div>
     <!--Main container ends here-->

@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?php
 include("functions/functions.php");
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,9 @@ include("functions/functions.php");
             </div>
             <div id="content_area">
                 <div id="shopping_cart">
-                    <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b style="color: yellow;">Shopping Cart-</b> Total Items: Total Price: <a href="cart.php" style="color: yellow;">Go to Cart</a></b></span>
+                    <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b
+                                style="color: yellow;">Shopping Cart-</b> Total Items: Total Price: <a href="cart.php"
+                                                                                                       style="color: yellow;">Go to Cart</a></b></span>
                 </div>
                 <div id="packages_box">
                     <?php
@@ -58,7 +60,7 @@ include("functions/functions.php");
 
                     $run_pack = mysqli_query($con, $get_pack);
 
-                    while ($row_pack=mysqli_fetch_array($run_pack)) {
+                    while ($row_pack = mysqli_fetch_array($run_pack)) {
                         $pack_id = $row_pack['package_id'];
                         $pack_cat = $row_pack['package_cat'];
                         $pack_type = $row_pack['package_type'];
@@ -82,7 +84,7 @@ include("functions/functions.php");
         </div>
         <!--Content ends here-->
         <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
+            <h2 style="text-align: center; padding-top: 30px;">&copy Ashraf Kabir MMXVIII</h2>
         </div>
     </div>
     <!--Main container ends here-->

@@ -13,23 +13,28 @@
             border: 1px solid black;
             width: 740px;
         }
+
         #guides th {
             text-align: left;
             background-color: #3A6070;
             color: #fff;
             padding: 4px;
         }
+
         #guides td {
             border: 1px solid black;
             padding: 4px;
             text-align: left;
         }
+
         #guides tr:nth-child(odd) td {
             background-color: #E7EDF0;
         }
+
         #regoff {
             font-size: 15px;
         }
+
         #headoff {
             font-size: 16px;
         }
@@ -107,7 +112,7 @@
                                 <td style="width: 150px;"><?php echo $e_name; ?></td>
                                 <td style="width: 160px;"><?php echo $e_email; ?></td>
                                 <td style="width: 100px;"><?php echo $e_location; ?></td>
-                                <td style="width: 240px;"align="center"><?php echo $e_address; ?></td>
+                                <td style="width: 240px;" align="center"><?php echo $e_address; ?></td>
                                 <td style="width: 120px;"><?php echo $e_contact; ?></td>
                             </tr>
                             <?php
@@ -130,7 +135,7 @@
         </div>
         <!--Content ends here-->
         <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
+            <h2 style="text-align: center; padding-top: 30px;">&copy Ashraf Kabir MMXVIII</h2>
         </div>
     </div>
     <!--Main container ends here-->

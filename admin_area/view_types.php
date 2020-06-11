@@ -1,5 +1,4 @@
 <?php
-
 if (!isset($_SESSION['user_email'])) {
     echo "<script>window.open('login.php?not_admin=You are not an Admin!','_self')</script>";
 } else {
@@ -20,7 +19,7 @@ if (!isset($_SESSION['user_email'])) {
         <table width="795" align="center" bgcolor="#EAD2AC">
             <tr align="center">
                 <td colspan="6"><h2 style="font-family: Cambria; margin-top: 10px; margin-bottom: 5px;">View All types
-                        Here</h2></td>
+                                                                                                        Here</h2></td>
             </tr>
             <tr align="center" bgcolor="#5FCEE8">
                 <th id="thfix">type ID</th>

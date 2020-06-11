@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?php
 include("functions/functions.php");
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,9 @@ include("functions/functions.php");
             </div>
             <div id="content_area">
                 <div id="shopping_cart">
-                    <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b style="color: yellow;">Shopping Cart-</b> Total Items: Total Price: <a href="cart.php" style="color: yellow;">Go to Cart</a></b></span>
+                    <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b
+                                style="color: yellow;">Shopping Cart-</b> Total Items: Total Price: <a href="cart.php"
+                                                                                                       style="color: yellow;">Go to Cart</a></b></span>
                 </div>
                 <div id="packages_box">
                     <?php
@@ -61,7 +63,7 @@ include("functions/functions.php");
 
                         $run_pack = mysqli_query($con, $get_pack);
 
-                        while ($row_pack=mysqli_fetch_array($run_pack)) {
+                        while ($row_pack = mysqli_fetch_array($run_pack)) {
                             $pack_id = $row_pack['package_id'];
                             $pack_title = $row_pack['package_title'];
                             $pack_price = $row_pack['package_price'];
@@ -78,9 +80,9 @@ include("functions/functions.php");
                             <a href='index.php?pack_id=$pack_id'><button style='float: right;font-size:16px; cursor: pointer; padding: 2px 4px; margin:2px;'>Book</button></a>
                             </div>
                             ";
-                        }   
+                        }
                     }
-                    
+
                     ?>
                 </div>
             </div>

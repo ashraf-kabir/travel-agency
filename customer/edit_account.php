@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Account</title>
-    
+
 </head>
 
 <body>
@@ -29,7 +29,7 @@
     $image = $row_customer['customer_image'];
     $contact = $row_customer['customer_contact'];
     $address = $row_customer['customer_address'];
-    
+
     ?>
     <form action="" method="post" enctype="multipart/form-data">
         <table align="center" width="750">
@@ -40,25 +40,26 @@
             </tr>
             <tr>
                 <td align="right">Name:</td>
-                <td><input type="text" name="c_name" value="<?php echo $name;?>" required=""></td>
+                <td><input type="text" name="c_name" value="<?php echo $name; ?>" required=""></td>
             </tr>
             <tr>
                 <td align="right">Email:</td>
-                <td><input type="text" name="c_email" value="<?php echo $email;?>"</td>
+                <td><input type="text" name="c_email" value="<?php echo $email; ?>"</td>
             </tr>
             <tr>
                 <td align="right">Password:</td>
-                <td><input type="password" name="c_pass" value="<?php echo $pass;?>"</td>
+                <td><input type="password" name="c_pass" value="<?php echo $pass; ?>"</td>
             </tr>
 
             <tr>
                 <td align="right">Passport ID:</td>
-                <td><input type="text" name="c_passport" disabled="" value="<?php echo $passport;?>"</td>
+                <td><input type="text" name="c_passport" disabled="" value="<?php echo $passport; ?>"</td>
             </tr>
 
             <tr>
                 <td align="right">Image:</td>
-                <td><input type="file" name="c_image"><img src="customer_images/<?php echo $image; ?>" width='50' height='50'></td>
+                <td><input type="file" name="c_image"><img src="customer_images/<?php echo $image; ?>" width='50'
+                                                           height='50'></td>
             </tr>
             <tr>
                 <td align="right">Country:</td>
@@ -83,15 +84,15 @@
             </tr>
             <tr>
                 <td align="right">City:</td>
-                <td><input type="text" name="c_city" value="<?php echo $city;?>"></td>
+                <td><input type="text" name="c_city" value="<?php echo $city; ?>"></td>
             </tr>
             <tr>
                 <td align="right">Contact:</td>
-                <td><input type="text" name="c_contact" value="<?php echo $contact;?>"></td>
+                <td><input type="text" name="c_contact" value="<?php echo $contact; ?>"></td>
             </tr>
             <tr>
                 <td align="right">Address:</td>
-                <td><input type="text" name="c_address" value="<?php echo $address;?>"></td>
+                <td><input type="text" name="c_address" value="<?php echo $address; ?>"></td>
             </tr>
             <tr align="center">
                 <td colspan="6"><input type="submit" name="update" value="Update Account"></td>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 include("includes/db.php");
 if (isset($_GET['edit_emp'])) {
@@ -17,6 +16,7 @@ if (isset($_GET['edit_emp'])) {
 
 }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Update Employee</title>
@@ -25,34 +25,37 @@ if (isset($_GET['edit_emp'])) {
     <form action="" method="post" enctype="multipart/form-data">
         <table align="center" width="795" border=2px bgcolor="ABB3C8">
             <tr align="center">
-                <td colspan="7"><h2 style="font-family: Cambria;margin-top: 20px; margin-bottom: 15px;">Insert New Employee</h2></td>
+                <td colspan="7"><h2 style="font-family: Cambria;margin-top: 20px; margin-bottom: 15px;">Insert New
+                                                                                                        Employee</h2>
+                </td>
             </tr>
             <tr>
                 <td align="right"><b>Employee Name:</b></td>
-                <td><input type="text" name="emp_name" value="<?php echo $emp_name;?>" size="40"></td>
+                <td><input type="text" name="emp_name" value="<?php echo $emp_name; ?>" size="40"></td>
             </tr>
             <tr>
                 <td align="right"><b>Employee Email:</b></td>
-                <td><input type="email" name="emp_email" value="<?php echo $emp_email;?>" size="40"></td>
+                <td><input type="email" name="emp_email" value="<?php echo $emp_email; ?>" size="40"></td>
             </tr>
             <tr>
                 <td align="right"><b>Employee Designation:</b></td>
-                <td><input type="text" name="emp_designation" value="<?php echo $emp_designation;?>"></td>
+                <td><input type="text" name="emp_designation" value="<?php echo $emp_designation; ?>"></td>
             </tr>
             <tr>
                 <td align="right"><b>Employee Location:</b></td>
-                <td><input type="text" name="emp_location" value="<?php echo $emp_location;?>"></td>
+                <td><input type="text" name="emp_location" value="<?php echo $emp_location; ?>"></td>
             </tr>
             <tr>
                 <td align="right"><b>Employee Address:</b></td>
-                <td><textarea name="emp_address" cols="40" rows="10"><?php echo $emp_address;?></textarea></td>
+                <td><textarea name="emp_address" cols="40" rows="10"><?php echo $emp_address; ?></textarea></td>
             </tr>
             <tr>
                 <td align="right"><b>Employee Contact:</b></td>
-                <td><input type="text" name="emp_contact" value="<?php echo $emp_contact;?>" size="30"></textarea></td>
+                <td><input type="text" name="emp_contact" value="<?php echo $emp_contact; ?>" size="30"></textarea></td>
             </tr>
             <tr align="center">
-                <td colspan="7"><input style="margin-top: 10px; margin-bottom: 15px;" type="submit" name="update_employee" value="Update Employee"></td>
+                <td colspan="7"><input style="margin-top: 10px; margin-bottom: 15px;" type="submit"
+                                       name="update_employee" value="Update Employee"></td>
             </tr>
         </table>
     </form>

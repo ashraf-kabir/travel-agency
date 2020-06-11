@@ -77,7 +77,7 @@ include("functions/functions.php");
         </div>
         <!--Content ends here-->
         <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
+            <h2 style="text-align: center; padding-top: 30px;">&copy Ashraf Kabir MMXVIII</h2>
         </div>
     </div>
     <!--Main container ends here-->

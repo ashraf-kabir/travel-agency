@@ -45,7 +45,8 @@ include("includes/db.php");
         <table width="500px" align="center" bgcolor="skyblue">
             <tr align="center">
                 <td colspan="3">
-                    <h2 style="margin-top: 20px; margin-bottom: 15px; font-family: Cambria;">Login or Register to Buy!</h2>
+                    <h2 style="margin-top: 20px; margin-bottom: 15px; font-family: Cambria;">Login or Register to
+                                                                                             Buy!</h2>
                 </td>
             </tr>
             <tr>
@@ -64,7 +65,11 @@ include("includes/db.php");
                 <br>
             </tr>
         </table>
-        <h2 style="float: right; padding: 0px 25px 10px 0px; font-family: arial"><a href="customer_register.php"style="text-decoration: none;">New? Register Here</a></h2>
+        <h2 style="float: right; padding: 0px 25px 10px 0px; font-family: arial"><a href="customer_register.php"
+                                                                                    style="text-decoration: none;">New?
+                                                                                                                   Register
+                                                                                                                   Here</a>
+        </h2>
     </form>
 
     <?php
@@ -91,7 +96,7 @@ include("includes/db.php");
 
         $check_cart = mysqli_num_rows($run_cart);
 
-        if ($check_customer > 0 AND $check_cart == 0) {
+        if ($check_customer > 0 and $check_cart == 0) {
             $_SESSION['customer_email'] = $c_email;
             echo "<script>alert('You have logged in successfully. Thanks!')</script>";
             echo "<script>window.open('customer/my_account.php','_self')</script>";

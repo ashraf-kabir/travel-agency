@@ -1,8 +1,8 @@
-<!DOCTYPE html>
 <?php
 session_start();
 include("functions/functions.php");
 ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -60,7 +60,7 @@ include("functions/functions.php");
                     <li><a href="my_account.php?delete_account">Delete Account</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
-                
+
             </div>
             <div id="content_area">
                 <?php cart(); ?>
@@ -68,7 +68,7 @@ include("functions/functions.php");
                     <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">
                         <?php
                         if (isset($_SESSION['customer_email'])) {
-                            echo "<b>Welcome: </b>".$_SESSION['customer_email'];
+                            echo "<b>Welcome: </b>" . $_SESSION['customer_email'];
                         }
                         ?>
                         <?php

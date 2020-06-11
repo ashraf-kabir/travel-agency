@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 include("includes/db.php");
 if (isset($_GET['edit_pack'])) {
@@ -33,6 +32,7 @@ if (isset($_GET['edit_pack'])) {
     $type_title = $row_type['type_title'];
 }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Update Package</title>
@@ -43,7 +43,9 @@ if (isset($_GET['edit_pack'])) {
     <form action="" method="post" enctype="multipart/form-data">
         <table align="center" width="795" border=2px bgcolor="ABB3C8">
             <tr align="center">
-                <td colspan="7"><h2 style="font-family: Cambria; margin-top: 20px; margin-bottom: 15px;">Edit & Update Package</h2></td>
+                <td colspan="7"><h2 style="font-family: Cambria; margin-top: 20px; margin-bottom: 15px;">Edit & Update
+                                                                                                         Package</h2>
+                </td>
             </tr>
             <tr>
                 <td align="right"><b>Package Title:</b></td>
@@ -103,7 +105,8 @@ if (isset($_GET['edit_pack'])) {
                 <td><input type="text" name="package_keywords" size="70" value="<?php echo $pack_keywords; ?>"></td>
             </tr>
             <tr align="center">
-                <td colspan="7"><input style="margin-top: 10px; margin-bottom: 15px;" type="submit" name="update_package" value="Update Package"></td>
+                <td colspan="7"><input style="margin-top: 10px; margin-bottom: 15px;" type="submit"
+                                       name="update_package" value="Update Package"></td>
             </tr>
         </table>
     </form>
@@ -128,7 +131,7 @@ if (isset($_POST['update_package'])) {
 
     //Asif v0.2
     $update_package;
-    if ($_FILES['package_image']['name']==""){
+    if ($_FILES['package_image']['name'] == "") {
         $update_package = "update packages set package_cat='$package_cat', package_type='$package_type', package_title='$package_title', package_price='$package_price', package_desc='$package_desc', package_keywords='$package_keywords' where package_id='$update_id'";
     } else {
         move_uploaded_file($package_image_tmp, "package_images/$package_image");

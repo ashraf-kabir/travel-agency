@@ -1,176 +1,180 @@
-<!DOCTYPE html>
 <?php
 session_start();
 include("functions/functions.php");
 include("includes/db.php");
 ?>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Travel Bird : Customer Register</title>
-    <link rel="stylesheet" href="styles/style.css" media="all">
-</head>
-<style type="text/css">
-    #fixm {
-        font-size: 15px;
-        padding: 4px;
-        font-family: arial;
-    }
-    #fixi {
-        font-size: 14px;
-        font-family: arial;
-    }
-    #btn {
-        font-family: arial;
-        font-size: 14px;
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 10px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        background-color: #32E875; 
-        color: black;
-    }
-    #btn:hover {
-        background-color: #4CAF50;
-        color: white;
-    }
-</style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Travel Bird : Customer Register</title>
+        <link rel="stylesheet" href="styles/style.css" media="all">
+    </head>
+    <style type="text/css">
+        #fixm {
+            font-size: 15px;
+            padding: 4px;
+            font-family: arial;
+        }
 
-<body>
-    <!--Main container starts here-->
-    <div class="main_wrapper">
-        <!--Header starts here-->
-        <div class="header_wrapper">
-            <a href="index.php"><img id="logo" src="images/logo.jpg"></a>
-            <img id="banner" src="images/banner.jpg">
-        </div>
-        <!--Header ends here-->
-        <!--Navbar starts here-->
-        <div class="menubar">
-            <ul id="menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="all_packages.php">All Packages</a></li>
-                <li><a href="checkout.php">My Account</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="cart.php">Shopping Cart</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
-            </ul>
-            <div id="form">
-                <form method="get" action="results.php" enctype="multipart/form-data">
-                    <input type="text" name="user_query" placeholder="Search a package">
-                    <input type="submit" name="search" value="Search">
-                </form>
+        #fixi {
+            font-size: 14px;
+            font-family: arial;
+        }
+
+        #btn {
+            font-family: arial;
+            font-size: 14px;
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: #32E875;
+            color: black;
+        }
+
+        #btn:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <!--Main container starts here-->
+        <div class="main_wrapper">
+            <!--Header starts here-->
+            <div class="header_wrapper">
+                <a href="index.php"><img id="logo" src="images/logo.jpg"></a>
+                <img id="banner" src="images/banner.jpg">
             </div>
-        </div>
-        <!--Navbar ends here-->
-        <!--Content starts here-->
-        <div class="content_wrapper">
-            <div class="sidebar">
-                <div id="sidebar_title"><b>Categories</b></div>
-                <ul id="cats">
-                    <?php getCats(); ?>
+            <!--Header ends here-->
+            <!--Navbar starts here-->
+            <div class="menubar">
+                <ul id="menu">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="all_packages.php">All Packages</a></li>
+                    <li><a href="checkout.php">My Account</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="cart.php">Shopping Cart</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
-                <br>
-                <div id="sidebar_title"><b>Types</b></div>
-                <ul id="cats">
-                    <?php getTypes(); ?>
-                </ul>
-            </div>
-            <div id="content_area">
-                <?php cart(); ?>
-                <div id="shopping_cart">
-                    <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b style="color: yellow;">Shopping Cart-</b> Total Items: <?php total_items(); ?> Total Price: <?php total_price(); ?> <a href="cart.php" style="color: yellow;">Go to Cart</a></b></span>
+                <div id="form">
+                    <form method="get" action="results.php" enctype="multipart/form-data">
+                        <input type="text" name="user_query" placeholder="Search a package">
+                        <input type="submit" name="search" value="Search">
+                    </form>
                 </div>
-                <form action="customer_register.php" method="post" enctype="multipart/form-data">
-                    <table align="center" width="750" style="margin-top: 20px;">
-                        <tr align="center">
-                            <td colspan="6">
-                                <h2 style="margin-bottom: 15px; font-family: Cambria;">Create an Account</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Name:</td>
-                            <td><input id="fixi" type="text" name="c_name" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Email:</td>
-                            <td><input type="email" name="c_email" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Password:</td>
-                            <td><input id="fixi" type="password" name="c_pass" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Passport ID:</td>
-                            <td><input type="text" name="c_passport" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Image:</td>
-                            <td><input id="fixi" type="file" name="c_image" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Country:</td>
-                            <td>
-                                <select name="c_country" required="">Select a
-                                    <option>Bangladesh</option>
-                                    <option>India</option>
-                                    <option>Japan</option>
-                                    <option>China</option>
-                                    <option>Russia</option>
-                                    <option>Portugal</option>
-                                    <option>England</option>
-                                    <option>Brazil</option>
-                                    <option>Spain</option>
-                                    <option>France</option>
-                                    <option>Switzerland</option>
-                                    <option>Croatia</option>
-                                    <option>Argentina</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your City:</td>
-                            <td><input id="fixi" type="text" name="c_city" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Contact:</td>
-                            <td><input id="fixi" type="text" name="c_contact" required=""></td>
-                        </tr>
-                        <tr>
-                            <td align="right" id="fixm">Your Address:</td>
-                            <td><input id="fixi" type="text" name="c_address" required=""></td>
-                        </tr>
-                        <tr align="center">
-                            <td colspan="6"><input id="btn" type="submit" name="register" value="Create Account"></td>
-                        </tr>
-                    </table>
-                </form>
+            </div>
+            <!--Navbar ends here-->
+            <!--Content starts here-->
+            <div class="content_wrapper">
+                <div class="sidebar">
+                    <div id="sidebar_title"><b>Categories</b></div>
+                    <ul id="cats">
+                        <?php getCats(); ?>
+                    </ul>
+                    <br>
+                    <div id="sidebar_title"><b>Types</b></div>
+                    <ul id="cats">
+                        <?php getTypes(); ?>
+                    </ul>
+                </div>
+                <div id="content_area">
+                    <?php cart(); ?>
+                    <div id="shopping_cart">
+                        <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b
+                                    style="color: yellow;">Shopping Cart-</b> Total Items: <?php total_items(); ?> Total Price: <?php total_price(); ?> <a
+                                    href="cart.php" style="color: yellow;">Go to Cart</a></b></span>
+                    </div>
+                    <form action="customer_register.php" method="post" enctype="multipart/form-data">
+                        <table align="center" width="750" style="margin-top: 20px;">
+                            <tr align="center">
+                                <td colspan="6">
+                                    <h2 style="margin-bottom: 15px; font-family: Cambria;">Create an Account</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Name:</td>
+                                <td><input id="fixi" type="text" name="c_name" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Email:</td>
+                                <td><input type="email" name="c_email" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Password:</td>
+                                <td><input id="fixi" type="password" name="c_pass" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Passport ID:</td>
+                                <td><input type="text" name="c_passport" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Image:</td>
+                                <td><input id="fixi" type="file" name="c_image" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Country:</td>
+                                <td>
+                                    <select name="c_country" required="">Select a
+                                        <option>Bangladesh</option>
+                                        <option>India</option>
+                                        <option>Japan</option>
+                                        <option>China</option>
+                                        <option>Russia</option>
+                                        <option>Portugal</option>
+                                        <option>England</option>
+                                        <option>Brazil</option>
+                                        <option>Spain</option>
+                                        <option>France</option>
+                                        <option>Switzerland</option>
+                                        <option>Croatia</option>
+                                        <option>Argentina</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your City:</td>
+                                <td><input id="fixi" type="text" name="c_city" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Contact:</td>
+                                <td><input id="fixi" type="text" name="c_contact" required=""></td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="fixm">Your Address:</td>
+                                <td><input id="fixi" type="text" name="c_address" required=""></td>
+                            </tr>
+                            <tr align="center">
+                                <td colspan="6"><input id="btn" type="submit" name="register" value="Create Account">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <!--Content ends here-->
+            <div id="footer">
+                <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
             </div>
         </div>
-        <!--Content ends here-->
-        <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
-        </div>
-    </div>
-    <!--Main container ends here-->
-</body>
+        <!--Main container ends here-->
+    </body>
 
-</html>
+    </html>
 
 <?php
-
 global $con;
-
 if (isset($_POST['register'])) {
-    
+
     $ip = getIp();
 
     $c_name = $_POST['c_name'];
@@ -197,7 +201,7 @@ if (isset($_POST['register'])) {
 
     $check_cart = mysqli_num_rows($run_cart);
 
-    if ($check_cart==0) {
+    if ($check_cart == 0) {
         $_SESSION['customer_email'] = $c_email;
         echo "<script>alert('Account has been created successfully. Thanks!')</script>";
         echo "<script>window.open('customer/my_account.php','_self')</script>";
@@ -206,6 +210,6 @@ if (isset($_POST['register'])) {
         echo "<script>alert('Account has been created successfully. Thanks!')</script>";
         echo "<script>window.open('checkout.php','_self')</script>";
     }
-    
+
 }
 ?>
