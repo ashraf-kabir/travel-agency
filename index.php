@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <?php
 session_start();
 include("functions/functions.php");
 ?>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Travel Bird : Home</title>
@@ -26,6 +25,7 @@ include("functions/functions.php");
             margin-top: 12px;
             margin-left: 2px;
         }
+
         .adminbtn:hover {
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
@@ -92,7 +92,8 @@ include("functions/functions.php");
                             echo "<a href='logout.php' style='color: orange;''>Logout</a>";
                         }
                         ?>
-                        <button class="adminbtn"><a style="text-decoration: none; color: #ffffff;" href="admin_area/index.php">Admin Login</a></button>
+                        <button class="adminbtn"><a style="text-decoration: none; color: #ffffff;"
+                                                    href="admin_area/index.php">Admin Login</a></button>
                     </span>
                 </div>
                 <div id="packages_box">
@@ -104,7 +105,7 @@ include("functions/functions.php");
         </div>
         <!--Content ends here-->
         <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Travel Bird MMXVIII</h2>
+            <h2 style="text-align: center; padding-top: 30px;">&copy Ashraf Kabir MMXVIII</h2>
         </div>
     </div>
     <!--Main container ends here-->
