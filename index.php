@@ -31,29 +31,20 @@ include("functions/functions.php");
         }
     </style>
 </head>
-
 <body>
-    <!--Main container starts here-->
+    <!--Main container starts-->
     <div class="main_wrapper">
-        <!--Header starts here-->
+        <!--Header starts-->
         <?php include 'includes/header.php'; ?>
-        <!--Header ends here-->
-        <!--Navbar starts here-->
+        <!--Header ends-->
+        <!--Navbar starts-->
         <?php include 'includes/navbar.php'; ?>
-        <!--Navbar ends here-->
-        <!--Content starts here-->
+        <!--Navbar ends-->
+        <!--Content starts-->
         <div class="content_wrapper">
-            <div class="sidebar">
-                <div id="sidebar_title"><b>Categories</b></div>
-                <ul id="cats">
-                    <?php getCats(); ?>
-                </ul>
-                <br>
-                <div id="sidebar_title"><b>Types</b></div>
-                <ul id="cats">
-                    <?php getTypes(); ?>
-                </ul>
-            </div>
+            <!--left-sidebar starts-->
+            <?php include "includes/left-sidebar.php"; ?>
+            <!--left-sidebar ends-->
             <div id="content_area">
                 <?php cart(); ?>
                 <div id="shopping_cart">
@@ -85,12 +76,11 @@ include("functions/functions.php");
                 </div>
             </div>
         </div>
-        <!--Content ends here-->
+        <!--Content ends-->
         <!--footer starts-->
         <?php include "includes/footer.php";?>
         <!--footer ends-->
     </div>
-    <!--Main container ends here-->
+    <!--Main container ends-->
 </body>
-
 </html>

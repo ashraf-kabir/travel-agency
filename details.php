@@ -19,17 +19,9 @@ include("functions/functions.php");
         <!--Navbar ends here-->
         <!--Content starts here-->
         <div class="content_wrapper">
-            <div class="sidebar">
-                <div id="sidebar_title"><b>Categories</b></div>
-                <ul id="cats">
-                    <?php getCats(); ?>
-                </ul>
-                <br>
-                <div id="sidebar_title"><b>Types</b></div>
-                <ul id="cats">
-                    <?php getTypes(); ?>
-                </ul>
-            </div>
+            <!--left-sidebar starts-->
+            <?php include "includes/left-sidebar.php"; ?>
+            <!--left-sidebar ends-->
             <div id="content_area">
                 <div id="shopping_cart">
                     <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b

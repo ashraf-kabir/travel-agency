@@ -3,13 +3,11 @@ include("functions/functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Travel Bird : Results</title>
     <link rel="stylesheet" href="styles/style.css" media="all">
 </head>
-
 <body>
     <!--Main container starts here-->
     <div class="main_wrapper">
@@ -21,17 +19,9 @@ include("functions/functions.php");
         <!--Navbar ends here-->
         <!--Content starts here-->
         <div class="content_wrapper">
-            <div class="sidebar">
-                <div id="sidebar_title"><b>Categories</b></div>
-                <ul id="cats">
-                    <?php getCats(); ?>
-                </ul>
-                <br>
-                <div id="sidebar_title"><b>Types</b></div>
-                <ul id="cats">
-                    <?php getTypes(); ?>
-                </ul>
-            </div>
+            <!--left-sidebar starts-->
+            <?php include "includes/left-sidebar.php"; ?>
+            <!--left-sidebar ends-->
             <div id="content_area">
                 <div id="shopping_cart">
                     <span style="float: right;font-size: 18px;padding: 5px;line-height: 40px;">Welcome Guest! <b
@@ -78,5 +68,4 @@ include("functions/functions.php");
     </div>
     <!--Main container ends here-->
 </body>
-
 </html>

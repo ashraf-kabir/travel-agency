@@ -65,7 +65,7 @@ include("includes/db.php");
                 <br>
             </tr>
         </table>
-        <h2 style="float: right; padding: 0px 25px 10px 0px; font-family: arial"><a href="../customer_register.php"
+        <h2 style="float: right; padding: 0px 25px 10px 0px; font-family: arial"><a href="customer_register.php"
                                                                                     style="text-decoration: none;">New?
                                                                                                                    Register
                                                                                                                    Here</a>
