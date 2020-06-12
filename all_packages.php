@@ -47,8 +47,8 @@ include("functions/functions.php");
                         <h3 style='font-family: Cambria; margin-bottom: 2px;'>$pack_title</h3>
                         <img src='admin_area/package_images/$pack_image' width='180' height='180'>
                         <p><b> Cost $ $pack_price</b></p>
-                        <a href='details.php?pack_id=$pack_id' style='float: left; font-size:18px;'>Details</a>
-                        <a href='index.php?pack_id=$pack_id'><button style='float: right; font-size:16px; cursor: pointer; padding: 2px 4px; margin:2px;'>Book</button></a>
+                        <a href='details.php?pack_id=$pack_id' style='float: left; font-size:18px;text-decoration: none;'>Details</a>
+                        <a href='index.php?pack_id=$pack_id'><button style='float: right; font-size:14px; cursor: pointer; padding: 2px 4px;'>Book</button></a>
                         </div>
                         ";
                     }
