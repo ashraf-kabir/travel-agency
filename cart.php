@@ -16,28 +16,10 @@ include("functions/functions.php");
     <!--Main container starts here-->
     <div class="main_wrapper">
         <!--Header starts here-->
-        <div class="header_wrapper">
-            <a href="index.php"><img id="logo" src="images/logo.jpg"></a>
-            <img id="banner" src="images/banner.jpg">
-        </div>
+        <?php include 'includes/header.php'; ?>
         <!--Header ends here-->
         <!--Navbar starts here-->
-        <div class="menubar">
-            <ul id="menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="all_packages.php">All Packages</a></li>
-                <li><a href="customer/my_account.php">My Account</a></li>
-                <li><a href="customer_register.php">Sign Up</a></li>
-                <li><a href="#">Shopping Cart</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
-            </ul>
-            <div id="form">
-                <form method="get" action="results.php" enctype="multipart/form-data">
-                    <input type="text" name="user_query" placeholder="Search a package">
-                    <input type="submit" name="search" value="Search">
-                </form>
-            </div>
-        </div>
+        <?php include 'includes/navbar.php'; ?>
         <!--Navbar ends here-->
         <!--Content starts here-->
         <div class="content_wrapper">
@@ -177,9 +159,9 @@ include("functions/functions.php");
             </div>
         </div>
         <!--Content ends here-->
-        <div id="footer">
-            <h2 style="text-align: center; padding-top: 30px;">&copy Ashraf Kabir MMXVIII</h2>
-        </div>
+        <!--footer starts-->
+        <?php include "includes/footer.php";?>
+        <!--footer ends-->
     </div>
     <!--Main container ends here-->
 </body>

@@ -58,14 +58,14 @@ include("includes/db.php");
                 <td><input id="inputbox" type="password" name="pass" placeholder="Enter your password" required=""></td>
             </tr>
             <tr align="center">
-                <td colspan="3"><a href="checkout.php?forgot_pass"><p id="fp">Forgot Password?</p></a></td>
+                <td colspan="3"><a href="../checkout.php?forgot_pass"><p id="fp">Forgot Password?</p></a></td>
             </tr>
             <tr align="center">
                 <td colspan="3"><input id="btn" type="submit" name="login" value="Login"></td>
                 <br>
             </tr>
         </table>
-        <h2 style="float: right; padding: 0px 25px 10px 0px; font-family: arial"><a href="customer_register.php"
+        <h2 style="float: right; padding: 0px 25px 10px 0px; font-family: arial"><a href="../customer_register.php"
                                                                                     style="text-decoration: none;">New?
                                                                                                                    Register
                                                                                                                    Here</a>
