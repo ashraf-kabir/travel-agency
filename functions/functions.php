@@ -92,7 +92,7 @@ function getCats()
     while ($row_cats = mysqli_fetch_array($run_cats)) {
         $cat_id = $row_cats['cat_id'];
         $cat_title = $row_cats['cat_title'];
-        echo "<li><a href='index.php?cat=$cat_id'>$cat_title</a></li>";
+        echo "<li><a href='index.php?cat=$cat_id' style='text-decoration: none;'>$cat_title</a></li>";
     }
 }
 
@@ -108,7 +108,7 @@ function getTypes()
         $type_id = $row_types['type_id'];
         $type_title = $row_types['type_title'];
 
-        echo "<li><a href='index.php?type=$type_id'>$type_title</a></li>";
+        echo "<li><a href='index.php?type=$type_id' style='text-decoration: none;'>$type_title</a></li>";
     }
 }
 
