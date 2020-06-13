@@ -12,4 +12,5 @@ Password: admin
 
 if you need the sql database file, email me on <ashrafkabir95@gmail.com>
 
-![alt text](https://github.com/ashraf-kabir/travel-agency/blob/master/travel-agency-preview.PNG)
+### Preview
+![preview of travel agency](https://github.com/ashraf-kabir/travel-agency/blob/master/travel-agency-preview.PNG)
