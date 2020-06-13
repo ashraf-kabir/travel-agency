@@ -20,7 +20,6 @@
     </table>
 </form>
 <?php
-
 include("includes/db.php");
 
 if (isset($_POST['change_pass'])) {

@@ -22,5 +22,4 @@ if (isset($_POST['no'])) {
     echo "<script>alert('Do not joke again!')</script>";
     echo "<script>window.open('my_account.php','_self')</script>";
 }
-
 ?>
