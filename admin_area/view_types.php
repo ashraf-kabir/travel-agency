@@ -39,7 +39,6 @@ if (!isset($_SESSION['user_email'])) {
                 $type_id = $row_type['type_id'];
                 $type_title = $row_type['type_title'];
                 $i++;
-
                 ?>
                 <tr align="center">
                     <td><?php echo $i; ?></td>
@@ -54,7 +53,6 @@ if (!isset($_SESSION['user_email'])) {
         </table>
     </body>
     </html>
-
     <?php
 }
 ?>

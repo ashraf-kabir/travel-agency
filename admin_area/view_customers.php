@@ -45,7 +45,6 @@ if (!isset($_SESSION['user_email'])) {
                 $c_passport = $row_c['c_passport'];
                 $c_image = $row_c['customer_image'];
                 $i++;
-
                 ?>
                 <tr align="center">
                     <td><?php echo $i; ?></td>

@@ -44,7 +44,6 @@ if (!isset($_SESSION['user_email'])) {
                 $pack_image = $row_pack['package_image'];
                 $pack_price = $row_pack['package_price'];
                 $i++;
-
                 ?>
                 <tr align="center">
                     <td><?php echo $i; ?></td>

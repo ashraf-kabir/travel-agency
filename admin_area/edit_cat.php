@@ -71,7 +71,6 @@ if (!isset($_SESSION['user_email'])) {
         </form>
 
         <?php
-
         if (isset($_POST['update_cat'])) {
             $update_id = $cat_id;
             $new_cat = $_POST['new_cat'];
@@ -83,7 +82,6 @@ if (!isset($_SESSION['user_email'])) {
                 echo "<script>window.open('index.php?view_cats','_self')</script>";
             }
         }
-
         ?>
     </body>
     </html>

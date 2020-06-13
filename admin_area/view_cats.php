@@ -30,7 +30,6 @@ if (!isset($_SESSION['user_email'])) {
             </tr>
             <?php
             include("includes/db.php");
-
             $get_cat = "select * from categories";
             $run_cat = mysqli_query($con, $get_cat);
 
@@ -40,7 +39,6 @@ if (!isset($_SESSION['user_email'])) {
                 $cat_id = $row_cat['cat_id'];
                 $cat_title = $row_cat['cat_title'];
                 $i++;
-
                 ?>
                 <tr align="center">
                     <td><?php echo $i; ?></td>

@@ -35,7 +35,6 @@ if (!isset($_SESSION['user_email'])) {
             </tr>
             <?php
             include("includes/db.php");
-
             $get_c = "select * from employees";
             $run_c = mysqli_query($con, $get_c);
             $i = 0;
@@ -49,7 +48,6 @@ if (!isset($_SESSION['user_email'])) {
                 $e_address = $row_c['emp_address'];
                 $e_contact = $row_c['emp_contact'];
                 $i++;
-
                 ?>
                 <tr align="center">
                     <td><?php echo $i; ?></td>
@@ -68,7 +66,6 @@ if (!isset($_SESSION['user_email'])) {
         </table>
     </body>
     </html>
-
     <?php
 }
 ?>

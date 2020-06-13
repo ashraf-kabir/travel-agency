@@ -57,7 +57,6 @@ if (!isset($_SESSION['user_email'])) {
         </form>
         <?php
         include("includes/db.php");
-
         if (isset($_POST['add_type'])) {
             $new_type = $_POST['new_type'];
             $insert_type = "insert into types (type_title) values ('$new_type')";
@@ -68,7 +67,6 @@ if (!isset($_SESSION['user_email'])) {
                 echo "<script>window.open('index.php?view_types','_self')</script>";
             }
         }
-
         ?>
     </body>
     </html>

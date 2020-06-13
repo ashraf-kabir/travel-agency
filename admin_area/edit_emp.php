@@ -13,7 +13,6 @@ if (isset($_GET['edit_emp'])) {
     $emp_location = $row_emp['emp_location'];
     $emp_address = $row_emp['emp_address'];
     $emp_contact = $row_emp['emp_contact'];
-
 }
 ?>
 <!DOCTYPE html>

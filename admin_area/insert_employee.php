@@ -1,6 +1,5 @@
 <?php
 include("includes/db.php");
-
 ?>
     <!DOCTYPE html>
     <html>
@@ -47,11 +46,8 @@ include("includes/db.php");
             </table>
         </form>
     </body>
-
     </html>
-
 <?php
-
 if (isset($_POST['insert_post'])) {
     //getting the text data from the fields
     $emp_name = $_POST['emp_name'];
@@ -70,5 +66,4 @@ if (isset($_POST['insert_post'])) {
         echo "<script>window.open('index.php?insert_employee','_self')</script>";
     }
 }
-
 ?>
