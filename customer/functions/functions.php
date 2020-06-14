@@ -26,14 +26,14 @@ function cart()
         global $con;
         $ip = getIp();
         $pack_id = $_GET['add_cart'];
-        $check_pack = "select * from cart where ip_add='$ip' and p_id='$pack_id'";
+        $check_pack = "SELECT * FROM cart WHERE ip_add='$ip' and p_id='$pack_id'";
 
         $run_check = mysqli_query($con, $check_pack);
 
         if (mysqli_num_rows($run_check) > 0) {
             echo "";
         } else {
-            $insert_pack = "insert into cart (p_id, ip_add) values ('$pack_id','$ip')";
+            $insert_pack = "INSERT INTO cart (p_id, ip_add) VALUES ('$pack_id','$ip')";
             $run_pack = mysqli_query($con, $insert_pack);
             echo "<script>window.open('index.php','self')</script>";
         }
@@ -48,13 +48,13 @@ function total_items()
 
         $ip = getip();
 
-        $get_items = "select * from cart where ip_add='$ip'";
+        $get_items = "SELECT * FROM cart WHERE ip_add='$ip'";
         $run_items = mysqli_query($con, $get_items);
         $count_items = mysqli_num_rows($run_items);
     } else {
         $ip = getip();
 
-        $get_items = "select * from cart where ip_add='$ip'";
+        $get_items = "SELECT * FROM cart WHERE ip_add='$ip'";
         $run_items = mysqli_query($con, $get_items);
         $count_items = mysqli_num_rows($run_items);
     }
@@ -69,12 +69,12 @@ function total_price()
     $total = 0;
 
     $ip = getIp();
-    $sel_price = "select * from cart where ip_add='$ip'";
+    $sel_price = "SELECT * FROM cart WHERE ip_add='$ip'";
     $run_price = mysqli_query($con, $sel_price);
 
     while ($p_price = mysqli_fetch_array($run_price)) {
         $pack_id = $p_price['p_id'];
-        $pack_price = "select * from packages where package_id='$pack_id'";
+        $pack_price = "SELECT * FROM packages WHERE package_id='$pack_id'";
         $run_pack_price = mysqli_query($con, $pack_price);
 
         while ($pp_price = mysqli_fetch_array($run_pack_price)) {
@@ -90,7 +90,7 @@ function total_price()
 function getCats()
 {
     global $con;
-    $get_cats = "select * from categories";
+    $get_cats = "SELECT * FROM categories";
 
     $run_cats = mysqli_query($con, $get_cats);
 
@@ -106,7 +106,7 @@ function getCats()
 function getTypes()
 {
     global $con;
-    $get_types = "select * from types";
+    $get_types = "SELECT * FROM types";
 
     $run_types = mysqli_query($con, $get_types);
 
@@ -123,7 +123,7 @@ function getPack()
     if (!isset($_GET['cat'])) {
         if (!isset($_GET['type'])) {
             global $con;
-            $get_pack = "select * from packages order by RAND() LIMIT 0,6";
+            $get_pack = "SELECT * FROM packages ORDER BY RAND() LIMIT 0,6";
 
             $run_pack = mysqli_query($con, $get_pack);
 
@@ -154,7 +154,7 @@ function getCatPack()
     if (isset($_GET['cat'])) {
         $cat_id = $_GET['cat'];
         global $con;
-        $get_cat_pack = "select * from packages where package_cat='$cat_id'";
+        $get_cat_pack = "SELECT * FROM packages WHERE package_cat='$cat_id'";
 
         $run_cat_pack = mysqli_query($con, $get_cat_pack);
 
@@ -191,7 +191,7 @@ function getTypePack()
     if (isset($_GET['type'])) {
         $type_id = $_GET['type'];
         global $con;
-        $get_type_pack = "select * from packages where package_type='$type_id'";
+        $get_type_pack = "SELECT * FROM packages WHERE package_type='$type_id'";
 
         $run_type_pack = mysqli_query($con, $get_type_pack);
 
