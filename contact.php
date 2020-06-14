@@ -75,7 +75,7 @@
                         <?php
                         include("includes/db.php");
 
-                        $get_c = "select * from employees";
+                        $get_c = "SELECT * FROM employees";
                         $run_c = mysqli_query($con, $get_c);
                         $i = 0;
 

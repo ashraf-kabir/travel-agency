@@ -34,7 +34,7 @@ include("functions/functions.php");
 
                         $search_query = $_GET['user_query'];
 
-                        $get_pack = "select * from packages where package_keywords like '%$search_query%'";
+                        $get_pack = "SELECT * FROM packages WHERE package_keywords LIKE '%$search_query%'";
 
                         $run_pack = mysqli_query($con, $get_pack);
 

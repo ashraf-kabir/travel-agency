@@ -59,12 +59,12 @@ include("functions/functions.php");
                             <?php
                             global $con;
                             $ip = getIp();
-                            $sel_price = "select * from cart where ip_add='$ip'";
+                            $sel_price = "SELECT * FROM cart WHERE ip_add='$ip'";
                             $run_price = mysqli_query($con, $sel_price);
 
                             while ($p_price = mysqli_fetch_array($run_price)) {
                                 $pack_id = $p_price['p_id'];
-                                $pack_price = "select * from packages where package_id='$pack_id'";
+                                $pack_price = "SELECT * FROM packages WHERE package_id='$pack_id'";
                                 $run_pack_price = mysqli_query($con, $pack_price);
 
                                 while ($pp_price = mysqli_fetch_array($run_pack_price)) {
@@ -93,7 +93,7 @@ include("functions/functions.php");
                                         if (isset($_POST['update_cart'])) {
                                             $qty = $_POST['qty'];
 
-                                            $update_qty = "update cart set qty='$qty'";
+                                            $update_qty = "UPDATE cart SET qty='$qty'";
                                             $run_qty = mysqli_query($con, $update_qty);
                                             $_SESSION['qty'] = $qty;
                                             $total = ($qty * $total);
@@ -131,7 +131,7 @@ include("functions/functions.php");
 
                         if (isset($_POST['update_cart'])) {
                             foreach ($_POST['remove'] as $remove_id) {
-                                $delete_package = "delete from cart where p_id='$remove_id' and ip_add='$ip'";
+                                $delete_package = "DELETE FROM cart WHERE p_id='$remove_id' AND ip_add='$ip'";
                                 $run_delete = mysqli_query($con, $delete_package);
                                 if ($run_delete) {
                                     echo "<script>window.open('cart.php','self')</script>";

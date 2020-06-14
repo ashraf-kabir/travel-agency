@@ -30,7 +30,7 @@ include("functions/functions.php");
                 </div>
                 <div id="packages_box">
                     <?php
-                    $get_pack = "select * from packages";
+                    $get_pack = "SELECT * FROM packages";
 
                     $run_pack = mysqli_query($con, $get_pack);
 

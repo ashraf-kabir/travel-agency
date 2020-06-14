@@ -19,11 +19,11 @@ if (isset($_POST['register'])) {
     // image will upload there
     move_uploaded_file($c_image_tmp, "customer/customer_images/$c_image");
 
-    $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,c_passport,customer_country,customer_city,customer_contact,customer_address,customer_image) values ('$ip','$c_name','$c_email','$c_pass','$c_passport','$c_country','$c_city','$c_contact','$c_address','$c_image')";
+    $insert_c = "INSERT INTO customers (customer_ip,customer_name,customer_email,customer_pass,c_passport,customer_country,customer_city,customer_contact,customer_address,customer_image) VALUES ('$ip','$c_name','$c_email','$c_pass','$c_passport','$c_country','$c_city','$c_contact','$c_address','$c_image')";
 
     $run_c = mysqli_query($con, $insert_c);
 
-    $sel_cart = "select * from cart where ip_add='$ip'";
+    $sel_cart = "SELECT * FROM cart WHERE ip_add='$ip'";
 
     $run_cart = mysqli_query($con, $sel_cart);
 
