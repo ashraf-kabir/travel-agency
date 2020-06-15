@@ -1,4 +1,4 @@
-# Travel-Agency
+# Travel Agency with full ecommerce
 
 ### This site developed using PHP mysqli and some javascript. It has full ecommerce functionality.
 
