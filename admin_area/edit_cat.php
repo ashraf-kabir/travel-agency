@@ -16,7 +16,6 @@ if (!isset($_SESSION['user_email'])) {
         $cat_id = $row_cat['cat_id'];
         $cat_title = $row_cat['cat_title'];
     }
-
     ?>
     <html lang="en">
     <head>
