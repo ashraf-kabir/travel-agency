@@ -1,4 +1,4 @@
-# Travel-Agency
+# Travel Agency with full ecommerce
 
 ### This site developed using PHP mysqli and some javascript. It has full ecommerce functionality.
 
@@ -15,7 +15,7 @@ Email: admin@gmail.com
 Password: admin
 
 
-##### if you need the sql database file, email me on <ashrafkabir95@gmail.com>
+### if you need the sql database file, email me on <ashrafkabir95@gmail.com>
 
 ### Project Preview
 ![preview of travel agency](https://github.com/ashraf-kabir/travel-agency/blob/master/travel-agency-preview.PNG)
