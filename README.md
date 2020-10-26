@@ -15,7 +15,7 @@ Email: admin@gmail.com
 Password: admin
 
 
-### if you need the sql database file, email me on <ashrafkabir95@gmail.com> and must mention the project name to me.
+## Raise a star to support me.
 
 ### Project Preview
 ![preview of travel agency](https://github.com/ashraf-kabir/travel-agency/blob/master/travel-agency-preview.PNG)
