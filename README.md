@@ -123,9 +123,8 @@ CREATE TABLE `customers` (
 INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `c_passport`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`) VALUES
 (7, '::1', 'Modric', 'modric@gmail.com', '123456', 'iuthd75323h', 'Croatia', 'Madrid', '09876543', 'pqr street, Madrid', 'modric.jpg'),
 (8, '::1', 'Gareth Bale', 'bale@gmail.com', '12345678', 'asfkajfgkjasdhfk', 'England', 'Madrid', '1234678', 'pqr street, Madrid', 'bale.jpg'),
-(9, '::1', 'Imrose Murshed', 'imrose@gmail.com', '12345678', 'kjahdjkahgjfkd', 'Bangladesh', 'Dhaka', '987654321', 'xyz street', '10257051_1478387172447340_7457831927587649442_n.jpg'),
-(10, '::1', 'Toni Kroos', 'kroos@gmail.com', '123456', '12345678', 'Spain', 'Madrid', '123123813', 'abcd street', '53302383_2313952138849356_535954198475309056_n.jpg'),
-(11, '::1', 'Dani Carvajal', 'dani@gmail.com', '123456', '121231', '--Select--', 'Madrid', 'asdasdasd', 'asdasdas', '13680916_523659327839565_4622168564214662790_n.png');
+(9, '::1', 'Toni Kroos', 'kroos@gmail.com', '123456', '12345678', 'Spain', 'Madrid', '123123813', 'abcd street', '53302383_2313952138849356_535954198475309056_n.jpg'),
+(10, '::1', 'Dani Carvajal', 'dani@gmail.com', '123456', '121231', '--Select--', 'Madrid', 'asdasdasd', 'asdasdas', '13680916_523659327839565_4622168564214662790_n.png');
 
 -- --------------------------------------------------------
 
