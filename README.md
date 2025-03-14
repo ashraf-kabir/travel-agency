@@ -7,6 +7,7 @@
   2. then clone the repo to your htdocs folder and visit using this URL on your localhost http://localhost/travel-agency/
   3. then import the sql (which is inside the sql directory) file on phpmyadmin
 
+### Create db.php file inside includes folder and paste from db.php.example file and then update your database credentials.
 
 to access admin panel:
 http://localhost/travel-agency/admin_area/

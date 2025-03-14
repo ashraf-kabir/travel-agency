@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("includes/db.php");
+include("../includes/db.php");
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $pass = mysqli_real_escape_string($con, $_POST['password']);

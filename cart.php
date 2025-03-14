@@ -82,9 +82,11 @@ include("functions/functions.php");
                                             <img src="admin_area/package_images/<?php echo $package_image; ?>"
                                                  width="60px" height="60px">
                                         </td>
-                                        <td><input type="text" size="4" name="qty" value="<?php
+                                        <td><input type="number" min="1" step="1" size="4" name="qty" value="<?php
                                             if (isset($_SESSION['qty'])) {
                                                 echo $_SESSION['qty'];
+                                            } else {
+                                                echo 1;
                                             }
                                             ?>">
                                         </td>

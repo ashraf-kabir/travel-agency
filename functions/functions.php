@@ -1,11 +1,5 @@
 <?php
-
-$con = mysqli_connect("localhost", "root", "", "tagency");
-
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
+include("includes/db.php");
 //getting user ip address
 function getIp()
 {
@@ -33,8 +27,8 @@ function cart()
         if (mysqli_num_rows($run_check) > 0) {
             echo "";
         } else {
-            $insert_pack = "insert into cart (p_id, ip_add) values ('$pack_id','$ip')";
-            $run_pack = mysqli_query($con, $insert_pack);
+            $insert_pack = "insert into cart (p_id, ip_add, qty) values ('$pack_id','$ip', 1)";
+            mysqli_query($con, $insert_pack);
             echo "<script>window.open('index.php','_self')</script>";
         }
     }
